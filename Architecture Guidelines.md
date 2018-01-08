@@ -27,6 +27,8 @@ app
 │   ├── pipes
 │   │   ├── ... 
 │   ├── components
+│   │   ├── feature_x
+│   │   │   ├── ... 
 │   │   ├── ... 
 │   ├── services
 │   │   ├── ...
@@ -35,16 +37,8 @@ app
 │   ├── shared.module.ts
 │   ├── ...
 ├── feature_x
-│   ├── smarts
-│   │   ├── ...
-│   ├── dummies
-│   │   ├── smart_x
-│   │   │   ├── dummy_y
-│   │   │   │   ├── dummy_y.component.ts
-│   │   │   │   ├── dummy_y.component.spec.ts
-│   │   │   │   ├── dummy_y.component.html
-│   │   │   │   ├── dummy_y.component.sass
-│   │   │   ├── ...  
+│   ├── containers
+│   │   ├── ...  
 │   ├── sandbox.ts  
 │   ├── feature_x.module.ts
 │   ├── ..
