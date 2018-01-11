@@ -1,0 +1,1 @@
+# @ngrx Configuration for ANT Angular Architecture
