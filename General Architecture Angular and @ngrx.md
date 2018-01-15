@@ -4,9 +4,9 @@
 
 ## Modular design
 
-This modular design of this architecture brings among other benefits the testability, maintainability and scalability of the software. Helping developers to better divide the tasks and specializes in the different layers. For angular also helps with the performance through the **change detection strategy**. Angular was designed for the use of design patterns that we will discuss later like **reactive programming, unidirectional data flow and centralized state management**.
+The modular design of this architecture brings among other benefits the testability, maintainability and scalability of the software. The layer separation allows developers to better divide the tasks and specializes in the different layers. The component patterns also helps with the performance of the apps through the **change detection strategy**.
 
-Despite what the diagram may indicate every Angular module will divide the application into features containing the necessary elements of all layers. In other words, a specific module will contain its **Presentational Module (Components)**, **Sandboxes and Core Infrastructure (Async Services, Sql Storage, etc)**. This design what allow is a separation of concerns and decoupling the Components from the **Application Core** through the **Abstraction Layer (Sandbox)**.
+This guidelines of this architecture suggest the use of certain design patterns. Angular itself was design with the use of those design pattern in mind, they are **reactive programming, unidirectional data flow and centralized state management**
 
 ### Components:
 
@@ -24,7 +24,7 @@ The communication process between **Components** described above is just a part 
 
 ### Sandboxes
 
-The **sandboxes** work as an abstraction of the core functionality of the system. They could be seen as **Application Services** from a **N-Layer architecture** and they main responsibility is to execute the corresponding methods from the **async services** and dispatch the actions to manage the state of the **Store**. **Sandbox** is a service which extends application core facade and exposes streams of state and connections to the async services.
+The **sandboxes** work as an abstraction of the core functionality of the system. They could be seen as **Application Services** from a back-end **N-Layer architecture** and they main responsibility is to execute the corresponding methods from the **async services** and dispatch the actions to manage the state of the **Store**. **Sandbox** is a service which extends application core facade and exposes streams of state and connections to the async services.
 
 ### Ngrx/store
 
@@ -32,7 +32,7 @@ The **sandboxes** work as an abstraction of the core functionality of the system
 
 **State management** comes from the reactive design of **React**, `Facebook` frontend framework and in particular from **Redux**. **Redux** is a module for manage state of an app, but what is state and **state management**??
 
-A **State** is the status of all the sync data of a software in a precise moment in time. When this is usually managed in the **backend** by the database provider in the **client side** it is managed through a **State machine** called **Store**. The **store** is the **centralized storage** of all existing entities data represented by a **state**. To modify the app data an action is dispatched and processed in the **store** by a pure function called **reducer**. A pure function is one that doesn’t have side effects, in other words this means that if you pass always the same input, it will return the same output. This also means that the reducer doesn’t modify the current state, instead it creates a new one.
+A **State** is the status of all the sync data of a software in a precise moment of time. When this is usually managed in the **backend** by the database provider in the **client side** it is managed through a **State machine** called **Store**. The **store** is the **centralized storage** of all existing entities data represented by a **state**. To modify the app data an action is dispatched and processed in the **store** by a pure function called **reducer**. A pure function is one that doesn’t have side effects, in other words this means that if you pass always the same input, it will return the same output. This also means that the reducer doesn’t modify the current state, instead it creates a new one.
 
 Above we lightly introduce the key features of **State management**. Let’s do a more formal presentation:
 
