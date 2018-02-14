@@ -63,5 +63,10 @@ Every project following this architecture it's gonna be composed by 3 main modul
   * General Utils (Directives, Pipes, Services)
   * Dummies components, separeted by the feature that they are more related to. The why of the location of the Dummies Component in this module is reusability.
 * **Feature Module:** This not actually a module but several, each one describing a very specific domain area and inside each one we should have
+
   * `Containers` (Smart Components), this are the components in charge of manage the logic of the feature, they communicate with the **Core Module** through `Sandboxes`.
   * `Sandboxes`, they are an abstraction layer between the **Core Module** and the `Containers`. They are in charge of dispatch actions to the store, select state slices, communicate with services, etc. They can also be seen as a facade to the logic of the app.
+
+## Bibliog
+
+* [@ngrx StyleGuide ](https://github.com/orizens/ngrx-styleguide/tree/master/docs)
